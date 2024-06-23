@@ -89,7 +89,7 @@ class Dominos {
         System.out.println("Bill is Rs." + totalBill);
         int offerQuantity = 0 ;
         
-        // Find amount of coke
+        // Find quantity of coke
 
         if (smPizza > 0) {
             if(smPizza / minSmPizza > 0){
