@@ -1,0 +1,25 @@
+<%@page import="model.User"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<% User u =(User)request.getAttribute("data"); %>
+
+
+<form>
+	<input type="text" name="name" value="<%=u.getName()%>" />
+	<input type="text" name="email" value="<%=u.getEmail()%>" />
+	<input type="text" name="password" value="<%=u.getPassword()%>" />
+
+		
+</form>
+
+
+</body>
+</html>

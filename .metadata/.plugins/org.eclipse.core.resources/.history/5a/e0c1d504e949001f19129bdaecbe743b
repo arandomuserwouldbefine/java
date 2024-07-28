@@ -1,0 +1,29 @@
+<%@page import="model.User"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+	response.setHeader("Cache-Control", "no-store");
+	response.setHeader("Pragma", "no-cache");
+	response.setHeader("Expires", "0");
+	%>
+	<%
+	User s = null;
+	if (session.getAttribute("data") != null) {
+		s = (User) session.getAttribute("data");
+	} else {
+		response.sendRedirect("login.jsp");
+	}
+	%>
+	<h1>You are authenticated, I guess?</h1>
+	
+	<h5><a href="">Logout</a></h5>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+package model;
+
+public class User {
+
+	private int id;
+	private String name, email, password, gender;
+
+	
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + "]";
+	}
+	
+	
+
+}
