@@ -9,12 +9,20 @@
     <fullyQualifiedTypeName name="java.sql.SQLData"/>
     <fullyQualifiedTypeName name="com.mysql.cj.protocol.ResultStreamer"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="model.User"/>
     <fullyQualifiedTypeName name="DAO.UserDAO"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="model.SellerModel"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Result"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.protocol.Resultset"/>
+    <fullyQualifiedTypeName name="model.Seller"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="connection.DBConnection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.startup.UserDatabase"/>
+    <fullyQualifiedTypeName name="DAO.SellerDAO"/>
+    <fullyQualifiedTypeName name="model.Customer"/>
+    <fullyQualifiedTypeName name="DAO.CustomerDAO"/>
 </qualifiedTypeNameHistroy>
