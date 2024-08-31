@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 
 import connection.DBConnection;
 import model.Customer;
-import model.Seller;
 
 public class CustomerDAO {
 
@@ -71,17 +70,17 @@ public class CustomerDAO {
 	
 	
 		
-	public static void UpdateSellerProfile(Seller seller) {
+	public static void UpdateCustomerProfile(Customer customer) {
 		try {
 			Connection conn = DBConnection.getConnection();
-			String sql = "update seller set name = ?, email = ?, address = ?, contact = ?, password = ? where id = ?";
+			String sql = "update customer set name = ?, email = ?, address = ?, contact = ?, password = ? where id = ?";
 			PreparedStatement pst = conn.prepareStatement(sql);
-			pst.setString(1, seller.getName());
-			pst.setString(2, seller.getEmail());
-			pst.setString(3, seller.getAddress());
-			pst.setLong(4, seller.getContact());
-			pst.setString(5, seller.getPassword());
-			pst.setInt(6, seller.getId());
+			pst.setString(1, customer.getName());
+			pst.setString(2, customer.getEmail());
+			pst.setString(3, customer.getAddress());
+			pst.setLong(4, customer.getContact());
+			pst.setString(5, customer.getPassword());
+			pst.setInt(6, customer.getId());
 			pst.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -92,7 +91,7 @@ public class CustomerDAO {
 	public static boolean correctPassword(String password) {
 		try {
 			Connection conn = DBConnection.getConnection();
-			String sql = "select id from seller where password = ?";
+			String sql = "select id from customer where password = ?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setString(1, password);
 			ResultSet rs = pst.executeQuery();
@@ -108,7 +107,7 @@ public class CustomerDAO {
 	public static void changePassword(int id, String password) {
 		try {
 			Connection conn = DBConnection.getConnection();
-			String sql = "update seller set password = ? where id = ?";
+			String sql = "update customer set password = ? where id = ?";
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setString(1, password);
 			pst.setInt(2, id);

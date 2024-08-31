@@ -58,6 +58,7 @@ if(session.getAttribute("data")!=null){
 }
 else{
 	response.sendRedirect("customer-login.jsp");
+	return ;
 }
 
 %>
@@ -70,20 +71,13 @@ else{
 <div class="collapse navbar-collapse" id="ftco-nav">
 <ul class="navbar-nav ml-auto">
 
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
-<div class="dropdown-menu" aria-labelledby="dropdown04">
-<a class="dropdown-item" href="seller-add-product.jsp">Add Product</a>
-<a class="dropdown-item" href="seller-manage-product.jsp">Manage Product</a>
-</div>
-</li>
 
 <li class="nav-item dropdown">
 <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=s.getName() %></a>
 <div class="dropdown-menu" aria-labelledby="dropdown04">
-<a class="dropdown-item" href="seller-profile.jsp">Profile</a>
-<a class="dropdown-item" href="seller-change-password.jsp">Change Password</a>
-<a class="dropdown-item" href="seller-logout.jsp">Logout</a>
+<a class="dropdown-item" href="customer-profile.jsp">Profile</a>
+<a class="dropdown-item" href="customer-change-password.jsp">Change Password</a>
+<a class="dropdown-item" href="customer-logout.jsp">Logout</a>
 </div>
 </li>
 

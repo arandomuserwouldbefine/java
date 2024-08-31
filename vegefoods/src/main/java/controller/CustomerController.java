@@ -61,16 +61,16 @@ public class CustomerController extends HttpServlet {
 		
 		
 		else if (action.equalsIgnoreCase("updateProfile")) {
-			Seller seller = new Seller();
-			seller.setId(Integer.parseInt(request.getParameter("id")));
-			seller.setName(request.getParameter("name"));
-			seller.setAddress(request.getParameter("address"));
-			seller.setEmail(request.getParameter("email"));
-			seller.setPassword(request.getParameter("password"));
-			seller.setContact(Long.parseLong(request.getParameter("contact")));
-			SellerDAO.UpdateSellerProfile(seller);
+			Customer customer = new Customer();
+			customer.setId(Integer.parseInt(request.getParameter("id")));
+			customer.setName(request.getParameter("name"));
+			customer.setAddress(request.getParameter("address"));
+			customer.setEmail(request.getParameter("email"));
+			customer.setPassword(request.getParameter("password"));
+			customer.setContact(Long.parseLong(request.getParameter("contact")));
+			CustomerDAO.UpdateCustomerProfile(customer);
 			HttpSession session = request.getSession();
-			session.setAttribute("data", seller);
+			session.setAttribute("data", customer);
 			request.getRequestDispatcher("customer-home.jsp").forward(request, response);
 		}
 		

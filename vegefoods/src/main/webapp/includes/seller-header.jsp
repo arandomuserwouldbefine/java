@@ -56,6 +56,7 @@ if(session.getAttribute("data")!=null){
 }
 else{
 	response.sendRedirect("seller-login.jsp");
+	return ;
 }
 
 %>

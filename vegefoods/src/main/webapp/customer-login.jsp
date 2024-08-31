@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-    <%@include file="includes/customer-header.jsp"%>
+    <%@include file="includes/header.jsp"%>
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,7 @@
 
 					<form action="CustomerController" method="POST"
 						class="bg-white p-5 contact-form">
-						<h1>Seller Login</h1>
+						<h1>Customer Login</h1>
 						<div class="form-group">
 							<input type="email" class="form-control" placeholder="Your Email"
 								name="email">
